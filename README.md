@@ -12,7 +12,7 @@ yarn # install deps and link workspaces
 .
 ├── jest.config.js
 ├── package.json
-├── packages
+└── packages
     ├── app
     │   ├── index.js
     │   ├── index.test.js
