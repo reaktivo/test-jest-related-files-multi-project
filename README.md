@@ -17,17 +17,11 @@ yarn # install deps and link workspaces
     │   ├── index.js
     │   ├── index.test.js
     │   └── package.json
-    ├── button
-    │   ├── index.js
-    │   ├── index.test.js
-    │   └── package.json
-    ├── header
-    │   ├── index.js
-    │   └── package.json
-    └── unrelated
+    └── button
         ├── index.js
         ├── index.test.js
         └── package.json
+    
 ```
 
 ## Dependency Graph
@@ -35,25 +29,22 @@ yarn # install deps and link workspaces
 ```
 packages/app/index.js
 └── packages/button/index.js
-    └── packages/header.index.js
 ```
 
 ## Reproduce bug
 
 ```
-yarn test:reproduce-bug
-# jest --findRelatedTests packages/header/index.js
+jest --findRelatedTests packages/button/index.js
 ```
 
-Notice that no tests are found.
-
+Notice that only the test for **button** is found.
 
 ## Running without projects
 
 ```
-yarn test:run-without-projects # You will notice that both packages/button/index.test.js is ran together as well as packages/app/index.test.js
-# jest --projects --findRelatedTests packages/header/index.js
+jest --projects --findRelatedTests packages/header/index.js
+# Notice I'm passing empty --projects, with causes Jest to act as a single root project 
 ```
 
-Notice the command is setting projects to an empty value.
+Notice that both the test for **app** and **button** are found
 
