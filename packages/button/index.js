@@ -1,5 +1,5 @@
-const Header = require('@test/header')
+// const Header = require('@test/header')
 
 module.exports = function Button(props) {
-  return `<button>${Header({text: props.text})}</button>`
+  return `<button>${props.text}</button>`
 }
