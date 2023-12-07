@@ -9,8 +9,8 @@
   ],
   "scripts": {
     "test": "jest",
-    "test:reproduce-bug": "jest --findRelatedTests packages/button/index.js",
-    "test:run-without-projects": "jest --projects --findRelatedTests packages/button/index.js"
+    "test:reproduce-bug": "jest --findRelatedTests packages/header/index.js",
+    "test:run-without-projects": "jest --projects --findRelatedTests packages/header/index.js"
   },
   "dependencies": {
     "@types/jest": "29.5.11",
