@@ -13,21 +13,21 @@ yarn # install deps and link workspaces
 ├── jest.config.js
 ├── package.json
 ├── packages
-│   ├── app
-│   │   ├── index.js
-│   │   ├── index.test.js
-│   │   └── package.json
-│   ├── button
-│   │   ├── index.js
-│   │   ├── index.test.js
-│   │   └── package.json
-│   ├── header
-│   │   ├── index.js
-│   │   └── package.json
-│   └── unrelated
-│       ├── index.js
-│       ├── index.test.js
-│       └── package.json
+    ├── app
+    │   ├── index.js
+    │   ├── index.test.js
+    │   └── package.json
+    ├── button
+    │   ├── index.js
+    │   ├── index.test.js
+    │   └── package.json
+    ├── header
+    │   ├── index.js
+    │   └── package.json
+    └── unrelated
+        ├── index.js
+        ├── index.test.js
+        └── package.json
 ```
 
 ## Dependency Graph
